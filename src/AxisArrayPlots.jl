@@ -18,7 +18,7 @@ end
     xlabel --> xlbl
     ylabel --> ylbl
     xrotation --> -45
-    axisvalues(arr)..., arr.data
+    axisvalues(arr)..., arr.data'
 end
 
 export Diff
