@@ -3,8 +3,6 @@ module AxisArrayPlots
 
 using AxisArrays
 using RecipesBase
-using ArgCheck
-using QuickTypes
 
 @recipe function plot{T}(arr::AxisArray{T, 1})
     xlabel --> axisnames(arr)[1]
