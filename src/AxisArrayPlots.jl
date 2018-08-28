@@ -20,13 +20,17 @@ end
 end
 
 export Diff
-@qstruct Diff(
-    aa1::AxisArray{T,1} where {T},
-    aa2::AxisArray{T,1} where {T};
-    normalize::Bool=false,
-    label1::String="y1",
-    label2::String="y2",
-    label_diff::String="diff")
+struct Diff{T}
+    aa1::AxisArray{T,1} where {T}
+    aa2::AxisArray{T,1} where {T}
+    normalize::Bool=false
+    label1::String="y1"
+    label2::String="y2"
+    label_diff::String="diff"
+end
+function Diff(aa1,aa2;normalize=false,label1="y1",label2="y2",label_diff="diff")
+    Diff(aa1,aa2,normalize,label1,label2,label_diff)
+end
 
 @recipe function plot(diff::Diff)
     title --> "Difference Plot"
