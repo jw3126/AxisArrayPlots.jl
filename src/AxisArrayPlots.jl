@@ -20,13 +20,13 @@ end
 end
 
 export Diff
-struct Diff{T}
+struct Diff
     aa1::AxisArray{T,1} where {T}
     aa2::AxisArray{T,1} where {T}
-    normalize::Bool=false
-    label1::String="y1"
-    label2::String="y2"
-    label_diff::String="diff"
+    normalize::Bool
+    label1::String
+    label2::String
+    label_diff::String
 end
 function Diff(aa1,aa2;normalize=false,label1="y1",label2="y2",label_diff="diff")
     Diff(aa1,aa2,normalize,label1,label2,label_diff)
