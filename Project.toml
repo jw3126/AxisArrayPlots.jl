@@ -1,0 +1,11 @@
+name = "AxisArrayPlots"
+uuid = "f51de325-e1aa-519a-a520-9dec0561105e"
+version = "0.1.0"
+
+[deps]
+AxisArrays = "39de3d68-74b9-583c-8d2d-e117c070f3a9"
+RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "≥ 0.7.0"
